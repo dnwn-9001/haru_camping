@@ -11,7 +11,7 @@ header {
 }
 
 header .logo {
-  width: 20vh;
+  width: 150px;
 }
 
 section {
@@ -56,4 +56,42 @@ section.mainPage .imageWrap .parallaxImage:nth-child(4) {
 
 section.mainPage .imageWrap .parallaxImage:nth-child(5) {
   background-image: url(../images/008.png);
+}
+
+section.subPage {
+  z-index: 10;
+  padding-top: 100vh;
+  padding-bottom: 60px;
+  width: 700px;
+  margin: auto;
+}
+
+section.subPage .innerWrap {
+  position: relative;
+  background-color: rgba(50, 92, 62, 0.5);
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+section.subPage .innerWrap .phrase {
+  display: flex;
+  justify-content: center;
+}
+
+section.subPage .innerWrap .phrase img {
+  width: 70%;
+}
+
+section.subPage .innerWrap .btnWrap {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section.subPage .innerWrap .btnWrap img {
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 20%;
+  cursor: pointer;
 }
