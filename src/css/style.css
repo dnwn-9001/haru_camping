@@ -11,6 +11,8 @@ header {
 }
 
 header .logo {
+  position: fixed;
+
   width: 150px;
 }
 
