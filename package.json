@@ -1,0 +1,29 @@
+{
+  "name": "haru_camping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnwn-9001/haru_camping.git"
+  },
+  "author": "Joan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnwn-9001/haru_camping/issues"
+  },
+  "homepage": "https://github.com/dnwn-9001/haru_camping#readme",
+  "dependencies": {
+    "next": "^9.5.5",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}
