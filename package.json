@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/dnwn-9001/haru_camping#readme",
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
+    "antd": "^4.24.10",
     "next": "^9.5.5",
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "eslint": "^8.41.0",

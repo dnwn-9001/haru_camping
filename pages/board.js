@@ -1,11 +1,18 @@
 import React from "react";
-import AppLayout from "../components/AppLayout";
+import Header from "../components/Header";
+import Head from "next/head";
 
 const Board = () => {
   return (
-    <AppLayout>
-      <div>게시판 입니다.</div>
-    </AppLayout>
+    <>
+      <Head>
+        <title>게시판 | Haru Camping</title>
+      </Head>
+
+      <Header>
+        <div>게시판 입니다.</div>
+      </Header>
+    </>
   );
 };
 
