@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { UserOutlined } from "@ant-design/icons";
-import { Menu, Avatar, Switch, Row, Col } from "antd";
+import { Avatar, Switch, Row, Col } from "antd";
 
 const Header = ({ children }) => {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div>
       <Row>
@@ -44,25 +45,25 @@ const Header = ({ children }) => {
             paddingRight: "10px",
           }}
         >
-          <Avatar
-            icon={<UserOutlined />}
-            style={{
-              backgroundColor: "#87d068",
-            }}
-          />
+          <Link href="/profile">
+            <a>
+              <Avatar
+                icon={<UserOutlined />}
+                style={{
+                  backgroundColor: "#87d068",
+                }}
+              />
+            </a>
+          </Link>
         </Col>
       </Row>
 
       <Row gutter={8}>
-        <Col xs={24} md={6}>
-          왼쪽메뉴
-        </Col>
+        <Col xs={24} md={6} />
         <Col xs={24} md={12}>
           {children}
         </Col>
-        <Col xs={24} md={6}>
-          오른쪽 메뉴
-        </Col>
+        <Col xs={24} md={6} />
       </Row>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
+import LoginForm from "../components/LoginForm";
 
 const Login = () => {
   return (
@@ -9,7 +10,7 @@ const Login = () => {
         <title>로그인 | Haru Camping</title>
       </Head>
       <Header>
-        <h1>로그인페이지</h1>
+        <LoginForm />
       </Header>
     </>
   );
