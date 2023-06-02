@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Head from "next/head";
+import InputBox from "../components/Input";
 
 const Board = () => {
   return (
@@ -9,9 +10,10 @@ const Board = () => {
         <title>게시판 | Haru Camping</title>
       </Head>
 
-      <Header>
-        <div>게시판 입니다.</div>
-      </Header>
+      <Header></Header>
+
+      <div>게시판 입니다.</div>
+      <InputBox></InputBox>
     </>
   );
 };
