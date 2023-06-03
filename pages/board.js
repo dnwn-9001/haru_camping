@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
+import AppLayout from "../components/AppLayout";
 import Head from "next/head";
-import InputBox from "../components/Input";
+import InputSearchBox from "../components/Input";
 
 const Board = () => {
   return (
@@ -10,10 +10,10 @@ const Board = () => {
         <title>게시판 | Haru Camping</title>
       </Head>
 
-      <Header></Header>
+      <AppLayout></AppLayout>
 
       <div>게시판 입니다.</div>
-      <InputBox></InputBox>
+      <InputSearchBox></InputSearchBox>
     </>
   );
 };

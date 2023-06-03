@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Header from "../components/Header";
+import AppLayout from "../components/AppLayout";
 
 const Signup = () => {
   return (
@@ -8,9 +8,9 @@ const Signup = () => {
       <Head>
         <title>회원가입 | Haru Camping</title>
       </Head>
-      <Header>
+      <AppLayout>
         <div>회원가입 페이지</div>
-      </Header>
+      </AppLayout>
     </>
   );
 };

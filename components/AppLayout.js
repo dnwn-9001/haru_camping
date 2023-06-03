@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Switch, Row, Col } from "antd";
 
-const Header = ({ children }) => {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+const AppLayout = ({ children }) => {
   return (
     <div>
       <Row>
@@ -14,7 +13,7 @@ const Header = ({ children }) => {
           md={2}
           style={{
             margin: "auto",
-            paddingLeft: "10px",
+            paddingLeft: "20px",
           }}
         >
           <div>
@@ -31,8 +30,15 @@ const Header = ({ children }) => {
           }}
         >
           <div>
-            {/* <Menu items={items} onClick={movePage} /> */}
-            <h1>하루캠핑 로고</h1>
+            <Link href="/">
+              <a>
+                <img
+                  src="/images/logo.png"
+                  alt="하루캠핑 로고"
+                  style={{ width: "130px" }}
+                />
+              </a>
+            </Link>
           </div>
         </Col>
 
@@ -42,10 +48,10 @@ const Header = ({ children }) => {
           style={{
             margin: "auto",
             textAlign: "right",
-            paddingRight: "10px",
+            paddingRight: "20px",
           }}
         >
-          <Link href="/profile">
+          <Link href="/login">
             <a>
               <Avatar
                 icon={<UserOutlined />}
@@ -59,37 +65,22 @@ const Header = ({ children }) => {
       </Row>
 
       <Row gutter={8}>
-        <Col xs={24} md={6} />
-        <Col xs={24} md={12}>
+        <Col xs={6} sm={6} md={4} />
+        <Col xs={12} sm={12} md={16}>
           {children}
         </Col>
-        <Col xs={24} md={6} />
+        <Col xs={6} sm={6} md={4} />
       </Row>
     </div>
   );
 };
 
-// const movePage = ({ key }) => {
-//   console.log(key);
-//   return (
-//     <Link href={key}>
-//       <a></a>
-//     </Link>
-//   );
-// };
-
-// const items = [
-//   { label: "하루캠핑", key: "/" },
-//   { label: "게시판", key: "/board" },
-//   { label: "마이페이지", key: "/profile" },
-// ];
-
 const onChange = (checked) => {
   console.log(`switch to ${checked}`);
 };
 
-Header.propTypes = {
+AppLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Header;
+export default AppLayout;

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
-import Header from "../components/Header";
+import AppLayout from "../components/AppLayout";
 import LoginForm from "../components/LoginForm";
+import Profile from "./profile";
 
 const Login = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
       <Head>
         <title>로그인 | Haru Camping</title>
       </Head>
-      <Header>
-        <LoginForm />
-      </Header>
+      <AppLayout>
+        {isLoggedIn ? (
+          <Profile setIsLoggedIn={setIsLoggedIn} />
+        ) : (
+          <LoginForm setIsLoggedIn={setIsLoggedIn} />
+        )}
+      </AppLayout>
     </>
   );
 };

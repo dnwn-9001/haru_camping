@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from "antd";
 
-const InputBox = () => {
+const InputSearchBox = () => {
   return (
     <Input.Search
       placeholder="검색할 제품"
@@ -15,4 +15,4 @@ const InputBox = () => {
 
 const onSearch = (value) => console.log(value);
 
-export default InputBox;
+export default InputSearchBox;
