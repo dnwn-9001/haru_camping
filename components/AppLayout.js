@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Switch, Row, Col } from "antd";
 
 const AppLayout = ({ children }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <div>
       <Row>
@@ -51,25 +52,38 @@ const AppLayout = ({ children }) => {
             paddingRight: "20px",
           }}
         >
-          <Link href="/login">
-            <a>
-              <Avatar
-                icon={<UserOutlined />}
-                style={{
-                  backgroundColor: "#87d068",
-                }}
-              />
-            </a>
-          </Link>
+          {isLoggedIn ? (
+            <Link href="/login">
+              <a>
+                <Avatar
+                  icon={<UserOutlined />}
+                  style={{
+                    backgroundColor: "#87d068",
+                  }}
+                />
+              </a>
+            </Link>
+          ) : (
+            <Link href="/profile">
+              <a>
+                <Avatar
+                  icon={<UserOutlined />}
+                  style={{
+                    backgroundColor: "#87d068",
+                  }}
+                />
+              </a>
+            </Link>
+          )}
         </Col>
       </Row>
 
       <Row gutter={8}>
-        <Col xs={6} sm={6} md={4} />
-        <Col xs={12} sm={12} md={16}>
+        <Col xs={2} sm={6} md={4} />
+        <Col xs={20} sm={12} md={16}>
           {children}
         </Col>
-        <Col xs={6} sm={6} md={4} />
+        <Col xs={2} sm={6} md={4} />
       </Row>
     </div>
   );

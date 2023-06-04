@@ -1,12 +1,14 @@
 import React, { useState, useCallback } from "react";
 import { Button, Form, Input } from "antd";
 import Link from "next/link";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const LoginTitle = styled.h1`
+  margin: auto;
+  width: 300px;
   text-align: center;
-  margin: 100px 0 50px 0;
+  padding: 100px 0 50px 0;
 `;
 
 const InputWrapper = styled.div`
@@ -16,10 +18,9 @@ const InputWrapper = styled.div`
 `;
 
 const LoginButton = styled(Button)`
-  margin-right: 10px;
   background-color: rgba(50, 92, 62, 0.5);
   border: none;
-  width: 300px;
+  width: 100%;
 `;
 
 const SignupBtn = styled.a`
@@ -27,7 +28,15 @@ const SignupBtn = styled.a`
   padding-top: 15px;
 `;
 
-const LoginForm = ({ setIsLoggedIn }) => {
+const ButtonWrapper = styled.div`
+  margin: auto;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const LoginForm = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
@@ -40,7 +49,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
 
   const onSubmitForm = useCallback(() => {
     console.log(id, password);
-    setIsLoggedIn(true);
+    // setIsLoggedIn(true);
   }, [id, password]);
 
   return (
@@ -67,21 +76,21 @@ const LoginForm = ({ setIsLoggedIn }) => {
             required
           />
         </InputWrapper>
-        <div>
+        <ButtonWrapper>
           <LoginButton type="primary" htmlType="submit" loading={false}>
             로그인
           </LoginButton>
           <Link href="/signup">
             <SignupBtn>회원가입</SignupBtn>
           </Link>
-        </div>
+        </ButtonWrapper>
       </Form>
     </>
   );
 };
 
-LoginForm.propTypes = {
-  setIsLoggedIn: PropTypes.elementType.isRequired,
-};
+// LoginForm.propTypes = {
+//   setIsLoggedIn: PropTypes.elementType.isRequired,
+// };
 
 export default LoginForm;
