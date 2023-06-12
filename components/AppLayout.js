@@ -93,8 +93,8 @@ const onChange = (checked) => {
   console.log(`switch to ${checked}`);
 };
 
-AppLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+// AppLayout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
 
 export default AppLayout;
