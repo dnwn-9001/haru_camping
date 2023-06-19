@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React from "react";
+// import PropTypes from "prop-types";
 import Link from "next/link";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Switch, Row, Col } from "antd";
+import { useSelector } from "react-redux";
 
 const AppLayout = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
   return (
     <div>
       <Row>

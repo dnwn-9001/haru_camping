@@ -1,6 +1,8 @@
 import React, { useCallback } from "react";
 import { Card, Button } from "antd";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { logoutAction } from "../reducers";
 
 const AccountBox = styled(Card)`
   width: 100%;
@@ -9,7 +11,9 @@ const AccountBox = styled(Card)`
 `;
 
 const UserProfile = () => {
+  const dispatch = useDispatch();
   const onLogOut = useCallback(() => {
+    dispatch(logoutAction());
     // setIsLoggedIn(false);
   });
 

@@ -3,6 +3,8 @@ import { Button, Form, Input } from "antd";
 import Link from "next/link";
 // import PropTypes from "prop-types";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { loginAction } from "../reducers";
 
 const LoginTitle = styled.h1`
   margin: auto;
@@ -37,6 +39,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
@@ -50,6 +53,7 @@ const LoginForm = () => {
   const onSubmitForm = useCallback(() => {
     console.log(id, password);
     // setIsLoggedIn(true);
+    dispatch(loginAction({ id, password }));
   }, [id, password]);
 
   return (

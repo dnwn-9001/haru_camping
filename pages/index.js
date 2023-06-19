@@ -91,7 +91,26 @@ const BtnImgCommon = styled.img`
 `;
 
 const Home = () => {
-  // const [scrollNum, setScrollNum] = useState(0);
+  const [scrollNum, setScrollNum] = useState(0);
+  const backgroundImgs = [
+    ParallaxImage1,
+    ParallaxImage2,
+    ParallaxImage3,
+    ParallaxImage4,
+    ParallaxImage5,
+  ];
+  const totalNum = backgroundImgs.length;
+
+  // window.addEventListener("scroll", () => {
+  //   setScrollNum(window.scrollY);
+
+  //   backgroundImgs.forEach((item, index) => {
+  //     console.log(item);
+  //     item.style.transform = `perspective(500px) translate3d(0,0, ${
+  //       scrollNum / (2 * (totalNum - index))
+  //     }px)`;
+  //   });
+  // });
 
   return (
     <>
